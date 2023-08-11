@@ -1,29 +1,32 @@
---- 
-import '@fontsource/lato';
+---
+import "@fontsource/lato";
 
 const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Estamos organizando una excursión a Acapulco, anímate y date un descanso">
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="¡Explora la magia de Acapulco con nuestra emocionante excursión! Sumérgete en playas de ensueño, disfruta de emocionantes actividades acuáticas y descubre la rica cultura de este destino icónico. ¡Reserva ahora y crea recuerdos inolvidables en tu viaje a Acapulco!"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 <style is:global>
   * {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
   body {
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     @apply bg-white;
   }
 </style>
