@@ -1,10 +1,14 @@
 ---
-import Header from '../components/Header.astro'
-import Navbar from '../components/Navbar.svelte'
 import Layout from '../layouts/Layout.astro'
+import Navbar from '../components/Navbar.svelte'
+import Header from '../components/Header.astro'
+import Itinerary from '../components/Itinerary.svelte';
+
 ---
 
 <Layout title="Vamos a Acapulco">
   <Navbar client:only />
   <Header />
+  <!-- <Banner /> -->
+  <Itinerary />
 </Layout>
