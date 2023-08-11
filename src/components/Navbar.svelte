@@ -11,7 +11,7 @@
   }
 </script>
 
-<nav class="fixed z-50 top-0 w-full text-font backdrop-blur">
+<nav class="fixed z-50 top-0 w-full text-font backdrop-blur-xl">
   <Container>
     <div
       class={`relative flex items-center justify-between h-[60px] border-b border-gray-400 border-opacity-30 ${

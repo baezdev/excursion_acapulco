@@ -1,0 +1,72 @@
+[
+  {
+    "day": "Viernes 01 de Marzo",
+    "activities": [
+      {
+        "hrs": "8:00 a 9:00",
+        "activity": "Instalarse",
+        "image": "https://www.revistalimpiezas.es/wp-content/uploads/sites/4/2020/05/camarera-de-piso-1200x800.jpg"
+      },
+      {
+        "hrs": "9:30 a 10:30",
+        "activity": "Desayuno",
+        "image": "https://blog.cocimia.com/wp-content/uploads/2020/12/Claves-para-un-desayuno-buffet-libre-de-5-estrellas.webp"
+      },
+      {
+        "hrs": "11:00",
+        "activity": "Salida a Puerto Marqués",
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/fd/75/43/maravillosa-vista-de.jpg?w=1200&h=1200&s=1"
+      },
+      {
+        "hrs": "17:00",
+        "activity": "Regreso al hotel",
+        "image": "https://www.clizzz.com/es/wp-content/uploads/2021/05/relax-hotel.png"
+      },
+      {
+        "hrs": "20:00",
+        "activity": "Salida al antro (opcional)",
+        "image": "https://media.timeout.com/images/103654230/750/422/image.jpg"
+      }
+    ]
+  },
+  {
+    "day": "Sábado 02 de Marzo",
+    "activities": [
+      {
+        "hrs": "8:00 a 10:00",
+        "activity": "Desayuno",
+        "image": "https://blog.cocimia.com/wp-content/uploads/2020/12/Claves-para-un-desayuno-buffet-libre-de-5-estrellas.webp"
+      },
+      {
+        "hrs": "10:00",
+        "activity": "Salida al revolcadero",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Revolcadero_Beach_in_Acapulco%2C_Mexico.jpg/250px-Revolcadero_Beach_in_Acapulco%2C_Mexico.jpg"
+      },
+      {
+        "hrs": "17:00",
+        "activity": "Regreso al hotel",
+        "image": "https://www.clizzz.com/es/wp-content/uploads/2021/05/relax-hotel.png"
+      }
+    ]
+  },
+  {
+    "day": "Domingo 03 de Marzo",
+    "activities": [
+      {
+        "hrs": "8:00 a 10:00",
+        "activity": "Desayuno",
+        "image": "https://blog.cocimia.com/wp-content/uploads/2020/12/Claves-para-un-desayuno-buffet-libre-de-5-estrellas.webp"
+      },
+      {
+        "hrs": "10:00",
+        "activity": "Salida a Caleta",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Caleta_Beach_in_Acapulco%2C_Mexico_2009.jpg"
+      },
+      {
+        "hrs": "17:00",
+        "activity": "Dejar el hotel",
+        "image": "https://us.123rf.com/450wm/dotshock/dotshock2105/dotshock210502024/174623786-ir-a-la-terminal-del-aeropuerto-viajero-de-negocios-confiado-caminando-por-las-calles-de-la-ciudad.jpg?ver=6"
+      }
+    ]
+  }
+]

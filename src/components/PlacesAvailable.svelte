@@ -4,5 +4,5 @@
     <span class="text-[10px] uppercase leading-none">Lugares</span>
     <p class="text-sm font-semibold leading-none">Disponibles</p>
   </div>
-  <span class="text-lg font-semibold">30</span>
+  <span class="text-lg font-semibold">45</span>
 </div>
