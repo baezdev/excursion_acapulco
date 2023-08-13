@@ -3,12 +3,13 @@ import Layout from '../layouts/Layout.astro'
 import Navbar from '../components/Navbar.svelte'
 import Header from '../components/Header.astro'
 import Itinerary from '../components/Itinerary.svelte';
+import Prices from '../components/Prices.svelte';
 
 ---
 
 <Layout title="Vamos a Acapulco">
   <Navbar client:only />
   <Header />
-  <!-- <Banner /> -->
   <Itinerary />
+  <Prices client:visible/>
 </Layout>

@@ -1,0 +1,38 @@
+{
+  "includes": [
+    "Hospedaje en hotel Torres Gemelas",
+    "Desayuno buffet los tres días",
+    "Traslados a playas",
+    "Viaje redondo en autobús de lujo"
+  ],
+  "prices": {
+    "adults": [
+      {
+        "for": 4,
+        "price": 2300
+      },
+      {
+        "for": 3,
+        "price": 2500
+      },
+      {
+        "for": 2,
+        "price": 2900
+      }
+    ],
+    "children": [
+      {
+        "for": 4,
+        "price": 2100
+      },
+      {
+        "for": 3,
+        "price": 2300
+      },
+      {
+        "for": 2,
+        "price": 2700
+      }
+    ]
+  }
+}
