@@ -1,0 +1,44 @@
+{
+  "name": "Las Torres Gemelas Acapulco",
+  "location": "Ubicado en el corazón de la bahía de Santa Lucía en la zona Dorada de Acapulco, <span class='font-semibold text-primary'>a unos pasos de los principales atractivos turísticos, puntos de interés y las hermosas playas.</span> A solo 25 minutos del Aeropuerto y a 10 minutos de las centrales de autobuses de Acapulco.",
+  "description": "Cada habitación confortablemente amueblada ofrece vista parcial al hermoso mar de Acapulco, esta categoría tiene una cama matrimonial, una cama Individual y un sofá cama. <span class='font-semibold text-primary'>Cada categoría cuenta con decoración única.</span>",
+  "services": [
+    "Alberca exterior",
+    "Accesible para discapacitados",
+    "Gimnasio",
+    "Supermercado",
+    "Elevador (es)",
+    "Lavandería y/o tintorería",
+    "Alberca para niños",
+    "Cajas de seguridad en recepción",
+    "Salones para eventos",
+    "Venta de tours",
+    "Internet"
+  ],
+  "servicesInTheRoom": [
+    "Aire acondicionado",
+    "Canales por cable",
+    "Canales satelitales",
+    "Mesa y sillas (estilo comedor)",
+    "Refri - Mini",
+    "Servicio de camarista diario",
+    "Decoración especial en hab.",
+    "Amenidades de aseo gratuitas",
+    "Baño privado c/ regadera",
+    "Vista al mar"
+  ],
+  "characteristics": [
+    {
+      "description": "4 huéspedes",
+      "icon": "people"
+    },
+    {
+      "description": "48 m²",
+      "icon": "resize"
+    },
+    {
+      "description": "Vista al mar",
+      "icon": "view"
+    }
+  ]
+}
