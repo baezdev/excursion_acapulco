@@ -9,12 +9,12 @@
       text: 'itinerario'
     },
     {
-      href: '#hotel',
-      text: 'hotel'
-    },
-    {
       href: '#prices',
       text: 'precios'
+    },
+    {
+      href: '#hotel',
+      text: 'hotel'
     },
   ]
 
@@ -34,6 +34,6 @@
     href='#'
     variant='secondary'
   >
-    quiero ir
+    quiero reservar
   </LinkButton>
 </div>

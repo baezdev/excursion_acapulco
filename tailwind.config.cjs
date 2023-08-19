@@ -7,7 +7,7 @@ module.exports = {
         primary: '#00B9AE',
         secondary: '#F4EDE1',
         font: '#333333'
-      }
+      },
     },
 	},
 	plugins: [

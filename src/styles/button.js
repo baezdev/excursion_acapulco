@@ -1,0 +1,1 @@
+export const baseStyle = "relative z-10 px-3 md:py-[5px] py-3 md:text-base text-3xl font-semibold rounded-md capitalize transition-all duration-200 w-fit mx-auto before:content-[''] before:w-full before:h-full before:block before:absolute before:top-0 before:rounded-md before:-z-10 before:left-0 hover:before:scale-110 before:transition-all before:duration-200"
