@@ -3,5 +3,5 @@
 </script>
 
 <Container>
-  <div class="w-full h-px bg-gray-400 bg-opacity-30 mt-6 md:mt-16" />
+  <div class="w-full h-px mt-6 bg-gray-400 bg-opacity-30 md:mt-16" />
 </Container>

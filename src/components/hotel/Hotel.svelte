@@ -1,6 +1,6 @@
 <script>
-  import Separator from "../Separator.svelte";
-  import Container from "../Container.svelte";
+  import Separator from "../ui/Separator.svelte";
+  import Container from "../ui/Container.svelte";
   import {
     name,
     location,

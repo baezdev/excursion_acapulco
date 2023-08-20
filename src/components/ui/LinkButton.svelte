@@ -1,6 +1,6 @@
 <script>
   import { twMerge } from 'tailwind-merge'
-  import { baseStyle } from '../styles/button';
+  import { baseStyle } from '../../styles/button';
 
   export let href
   export let variant = 'primary'

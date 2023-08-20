@@ -1,9 +1,9 @@
 <script>
-  import { prices } from "../data/prices.json";
-  import Container from "./Container.svelte";
-  import Separator from "./Separator.svelte";
-  import ButtonsSelectors from "./prices/ButtonsSelectors.svelte";
-  import PricesCards from "./prices/PricesCards.svelte";
+  import { prices } from "../../data/prices.json";
+  import Container from "../ui/Container.svelte";
+  import Separator from "../ui/Separator.svelte";
+  import ButtonsSelectors from "./ButtonsSelectors.svelte";
+  import PricesCards from "./PricesCards.svelte";
 
   let activeKindOfPerson = "adultos";
   const { adults, children } = prices;
@@ -17,7 +17,7 @@
 <Separator />
 <section class="py-16 text-font" id="prices">
   <Container>
-    <h2 class="font-bold text-font text-3xl md:text-6xl mb-10">Precios</h2>
+    <h2 class="mb-10 text-3xl font-bold text-font md:text-6xl">Precios</h2>
     <main>
       <ButtonsSelectors
         active={activeKindOfPerson}

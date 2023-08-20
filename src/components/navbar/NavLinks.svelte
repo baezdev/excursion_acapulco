@@ -1,5 +1,5 @@
 <script>
-  import LinkButton from "./LinkButton.svelte";
+  import LinkButton from "../ui/LinkButton.svelte";
   import NavLink from "./NavLink.svelte";
 
   export let navbarIsOpen;
