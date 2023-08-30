@@ -22,9 +22,14 @@
   </a>
 {:else}
   <button
-    class={twMerge(baseStyle, variantButton, disabled === true && 'before:invert hover:before:scale-100')}
+    class={twMerge(
+      baseStyle,
+      variantButton,
+      disabled === true &&
+        "hover:before:scale-100 cursor-not-allowed border-primary text-primary before:bg-white"
+    )}
     {href}
-    {disabled} 
+    {disabled}
   >
     <slot />
   </button>
