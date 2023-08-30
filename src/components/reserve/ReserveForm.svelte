@@ -4,6 +4,7 @@
 
   let name = "";
   let phone = "";
+  let places
   let termsWereAccepted = false;
 
   const handleSubmit = (e) => {
@@ -12,12 +13,12 @@
       return;
     }
 
-    console.log({ name, phone, termsWereAccepted });
+    console.log('fino')
   };
 </script>
 
 <form on:submit|preventDefault={handleSubmit} class="flex-1 px-5">
-  <p>Llena los siguientes datos y nosotros te contactamos</p>
+  <p class="text-2xl font-semibold mb-8">Llena los siguientes datos y nosotros te contactamos</p>
   <div class="flex flex-col gap-5">
     <Field
       bind:fieldValue={name}
@@ -32,6 +33,18 @@
       placeholder="Ingrese su numero de telefono"
       type="number"
     />
+    <div class="flex items-center justify-between gap-5">
+      <Field
+        bind:fieldValue={places}
+        label="# de Lugares"
+        name="places"
+        placeholder="Cuantos lugares quieres reservar"
+        type="number"
+      />
+      <p class="font-bold text-xl">
+        ¡<span class="text-2xl text-primary">45</span> lugares disponibles!
+      </p>
+    </div>
     <label class="flex items-center">
       <input
         type="checkbox"

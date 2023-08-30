@@ -10,7 +10,7 @@
 </script>
 
 <div
-  class="flex flex-col border-b-2 border-b-gray-400 border-opacity-30 focus-within:border-primary focus-within:border-opacity-100 group"
+  class="flex flex-col border-b-2 border-b-gray-400 border-opacity-30 focus-within:border-primary focus-within:border-opacity-100 group flex-1"
 >
   <label
     for={name}
