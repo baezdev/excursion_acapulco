@@ -15,7 +15,9 @@
   };
 </script>
 
-<nav class="fixed top-0 z-50 w-full text-font backdrop-blur-xl">
+<nav
+  class="fixed top-0 z-50 w-full text-font backdrop-blur-xl animate-fade animate-once animate-ease-in-out"
+>
   <Container>
     <div
       class={`relative flex items-center justify-between h-[60px] border-b border-gray-400 border-opacity-30 ${
