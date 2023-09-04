@@ -23,6 +23,9 @@ dependencies:
   svelte:
     specifier: 4.0.0
     version: 4.0.0
+  sweetalert2:
+    specifier: ^11.7.27
+    version: 11.7.27
   tailwind-merge:
     specifier: 1.14.0
     version: 1.14.0
@@ -3376,6 +3379,10 @@ packages:
       locate-character: 3.0.0
       magic-string: 0.30.2
       periscopic: 3.1.0
+    dev: false
+
+  /sweetalert2@11.7.27:
+    resolution: {integrity: sha512-QbRXGQn1sb7HEhzA/K2xtWIwQHh/qkSbb1w6jYcTql2xy17876lTREEt1D4X6Q0x2wHtfUjKJ+Cb8IVkRoq7DQ==}
     dev: false
 
   /synckit@0.8.5:
