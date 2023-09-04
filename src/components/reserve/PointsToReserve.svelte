@@ -15,17 +15,17 @@
     {
       title: "Términos y condiciones",
       description:
-        "Si quieres saber mas, revisa nuestros <a href='terminos' class='text-primary font-semibold'>terminos y condiciones</a>",
+        "Si quieres saber mas, revisa nuestros <a href='terminos' class='font-semibold text-primary'>terminos y condiciones</a>",
       image: "book",
     },
   ];
 </script>
 
-<article class="mt-12 flex flex-col gap-4">
+<article class="flex flex-col gap-4 mt-6 md:mt-12">
   {#each pointsToReserve as { title, image, description }}
-    <div class="flex gap-4 items-center pr-28">
+    <div class="flex items-center gap-4 pr-10 md:pr-28">
       <picture
-        class="bg-primary flex rounded-2xl w-14 h-14 justify-center items-center"
+        class="flex items-center justify-center bg-primary rounded-2xl w-14 h-14"
       >
         <img
           src={`/icons/${image}.svg`}

@@ -1,13 +1,13 @@
 ---
 import Navbar from "../components/navbar/Navbar.svelte";
 import Layout from "../layouts/Layout.astro";
-import BackgroundImage from "../components/reserve/BackgroundImage.astro"
 import ReserveSection from "../components/reserve/Reserve.svelte"
+import Footer from "../components/ui/Footer.astro";
 
 ---
 
 <Layout title="Reservar">
   <Navbar client:only/>
-  <!-- <BackgroundImage /> -->
   <ReserveSection client:only />
+  <Footer />
 </Layout>
