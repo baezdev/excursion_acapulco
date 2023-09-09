@@ -34,6 +34,7 @@
         class={fieldStyle}
         {placeholder}
         {name}
+        on:input
       />
     {/if}
   </div>
