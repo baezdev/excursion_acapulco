@@ -6,11 +6,12 @@
   export let variant = "primary";
   export let type = "link";
   export let disabled = false;
+  export let role = "button";
 
   const getVariantStyles = () => {
     return variant === "primary"
       ? "text-white before:bg-primary text-xl px-7 py-4 md:py-3 mx-0"
-      : "text-primary before:bg-primary before:bg-opacity-20 md:text-base text-3xl";
+      : "text-primary before:bg-primary before:bg-opacity-20 md:text-base text-3xl mx-0";
   };
 
   const variantButton = getVariantStyles();
@@ -30,6 +31,8 @@
     )}
     {href}
     {disabled}
+    type={role}
+    on:click
   >
     <slot />
   </button>
