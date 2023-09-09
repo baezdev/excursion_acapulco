@@ -1,6 +1,6 @@
 import { NAME_REGEX, PHONE_REGEX } from '../constants/regex'
 
-export const validateForm = ({ name, phone, places, palcesAvailable }) => {
+export const validateForm = ({ name, phone, palcesAvailable, rooms }) => {
   const errors = {}
 
   //name validation
@@ -23,14 +23,32 @@ export const validateForm = ({ name, phone, places, palcesAvailable }) => {
     errors.phone = "Deben ser 10 digitos"
   }
 
-  //places validation
+  /* //places validation
   if (places === 0) {
     errors.places = "El numero de lugares debe ser mayor a 0"
   }
 
   else if (places > palcesAvailable) {
     errors.places = `Lo siento solo hay ${palcesAvailable} lugares disponibles`
-  }
+  } */
+
+  rooms?.forEach((room) => {
+    if (room.persons === '') {
+      errors[`person${room.id}`] = 'Campo requerido'
+    }
+
+    else if (room.persons === 0) {
+      errors[`person${room.id}`] = 'No puede ser 0'
+    }
+
+    else if (room.persons < 2 || room.persons > 4 ) {
+      errors[`person${room.id}`] = '2, 3 o 4 personas'
+    }
+
+    if (room.childrens === 0) {
+      errors[`children${room.id}`] = 'No puede ser 0'
+    }
+  })
 
   return errors
 }
