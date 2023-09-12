@@ -39,6 +39,6 @@
     {/if}
   </div>
   {#if error}
-    <p class="mt-1 text-sm font-medium text-red-500 transition-all duration-300">{error}</p>
+    <p class="mt-1 text-sm font-medium text-red-500 animate-fade animate-once animate-ease-in-out">{error}</p>
   {/if}
 </div>

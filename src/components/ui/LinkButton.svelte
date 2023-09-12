@@ -7,18 +7,28 @@
   export let type = "link";
   export let disabled = false;
   export let role = "button";
+  export let size = "normal";
 
   const getVariantStyles = () => {
     return variant === "primary"
       ? "text-white before:bg-primary text-xl px-7 py-4 md:py-3 mx-0"
-      : "text-primary before:bg-primary before:bg-opacity-20 md:text-base text-3xl mx-0";
+      : `text-primary before:bg-primary before:bg-opacity-20  mx-0 ${
+          size === "small" ? "text-base px-2" : "md:text-base text-3xl"
+        }`;
   };
 
   const variantButton = getVariantStyles();
 </script>
 
 {#if type === "link"}
-  <a {href} class={twMerge(baseStyle, variantButton)}>
+  <a
+    {href}
+    class={twMerge(
+      size === "small" && "text-base mx-0",
+      baseStyle,
+      variantButton
+    )}
+  >
     <slot />
   </a>
 {:else}
