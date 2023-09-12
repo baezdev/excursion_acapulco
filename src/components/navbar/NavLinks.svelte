@@ -1,25 +1,29 @@
 <script>
-  import LinkButton from "./LinkButton.svelte";
+  import LinkButton from "../ui/LinkButton.svelte";
   import NavLink from "./NavLink.svelte";
 
   export let navbarIsOpen;
-  export let closeNavbar
+  export let closeNavbar;
 
   const links = [
     {
       href: "#itinerary",
       text: "itinerario",
+      path: "/",
     },
     {
       href: "#prices",
       text: "precios",
+      path: "/",
     },
     {
       href: "#hotel",
       text: "hotel",
+      path: "/",
     },
   ];
 
+  const { pathname } = document.location;
 </script>
 
 <div
@@ -30,13 +34,20 @@
   }`}
 >
   <ul
-    class="flex flex-col items-center text-3xl font-medium gap-x-2 gap-y-14 md:flex-row md:text-base"
+    class="flex flex-col items-center text-3xl font-medium gap-x-2 gap-y-14 md:flex-row md:text-base text-center"
   >
-    {#each links as link}
+    {#if pathname !== '/'}
       <li class="capitalize">
-        <NavLink href={link.href} text={link.text} {closeNavbar} />
+        <NavLink href='/' text='inicio' {closeNavbar} />
       </li>
+    {/if}
+    {#each links as link}
+      {#if pathname === link.path}
+        <li class="capitalize">
+          <NavLink href={link.href} text={link.text} {closeNavbar} />
+        </li>
+      {/if}
     {/each}
   </ul>
-  <LinkButton href="#" variant="secondary">quiero reservar</LinkButton>
+  <LinkButton href="/reserve" variant="secondary">quiero reservar</LinkButton>
 </div>

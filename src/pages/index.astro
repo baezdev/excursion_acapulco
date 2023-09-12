@@ -1,10 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Navbar from '../components/Navbar.svelte'
-import Header from '../components/Header.astro'
-import Itinerary from '../components/Itinerary.svelte';
-import Prices from '../components/Prices.svelte';
+import Navbar from '../components/navbar/Navbar.svelte'
+import Header from '../components/header/Header.astro'
+import Itinerary from '../components/activities/Itinerary.svelte';
+import Prices from '../components/prices/Prices.svelte';
 import Hotel from '../components/hotel/Hotel.svelte';
+import Footer from '../components/ui/Footer.astro';
 
 ---
 
@@ -14,4 +15,5 @@ import Hotel from '../components/hotel/Hotel.svelte';
   <Itinerary />
   <Prices client:visible/>
   <Hotel />
+  <Footer />
 </Layout>
