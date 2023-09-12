@@ -26,3 +26,20 @@ export const handleSumTotals = (numbers) => {
 
   return total;
 };
+
+export const countPersons = (rooms) => {
+  const personsCount = rooms.reduce(
+    (acc, room) => acc + Number(room.persons),
+    0
+  );
+
+  const childrenCount = rooms.reduce(
+    (acc, room) => acc + Number(room.childrens),
+    0
+  );
+
+  return {
+    persons: personsCount,
+    childrens: childrenCount,
+  };
+};
