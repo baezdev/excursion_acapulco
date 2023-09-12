@@ -32,6 +32,7 @@ export const validateForm = ({ name, phone, palcesAvailable, rooms }) => {
     errors.places = `Lo siento solo hay ${palcesAvailable} lugares disponibles`
   } */
 
+  //rooms validation one for one
   rooms?.forEach((room) => {
     if (room.persons === '') {
       errors[`person${room.id}`] = 'Campo requerido'
