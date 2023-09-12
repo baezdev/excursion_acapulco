@@ -4,10 +4,15 @@
     calculateTotal,
     handleSumTotals,
   } from "../../helpers/operations";
+  import { generateMessage } from "../../helpers/messages";
   import { validateForm } from "../../helpers/validateForm";
+  import { showCongralutationsAlert } from "../../helpers/alerts";
+  import { generateConfetti } from "../../helpers/confetti";
+  import { sendMessage } from "../../service/sendMessage";
   import LinkButton from "../ui/LinkButton.svelte";
   import Field from "./Field.svelte";
   import TermsCheckbox from "./TermsCheckbox.svelte";
+  import ButtonDelete from "./ButtonDelete.svelte";
 
   let name = "";
   let phone = "";
@@ -17,7 +22,8 @@
   let total = 0;
 
   const handleAddNewRoom = () => {
-    //TODO evitar que se agreguen mas de 3 habitaciones
+    if (rooms.length >= 3) return;
+
     rooms = [
       ...rooms,
       {
@@ -40,11 +46,12 @@
     if (Object.keys(errors).length > 0) {
       return;
     }
-    console.log('listo')
-    /* window.open(
-      "https://api.whatsapp.com/send?phone=525631498641&text=Hola%Soy%Angel%y%quiero%ir%a%Acapulco",
-      "_blank"
-    ); */
+
+    const message = generateMessage({ name, phone, rooms, total });
+
+    sendMessage(message);
+    showCongralutationsAlert();
+    generateConfetti();
   };
 </script>
 
@@ -72,7 +79,7 @@
     </div>
     <div>
       <div class="flex items-center justify-between">
-        <span class="text-xl font-bold">
+        <span class="text-base md:text-xl font-bold">
           {rooms.length}
           {rooms.length !== 1
             ? "Habitaciones agregadas"
@@ -82,6 +89,7 @@
           variant="secondary"
           type="button"
           on:click={handleAddNewRoom}
+          size="small"
         >
           Agregar habitacion
         </LinkButton>
@@ -116,21 +124,11 @@
               }}
             />
             <span class="flex-1 font-medium self-center"
-              >Total: <span class="text-xl font-semibold"
+              >Total: $<span class="text-xl font-semibold"
                 >{calculateTotal(room.persons, room.childrens)}</span
               ></span
             >
-            <button
-              type="button"
-              class="w-8"
-              on:click={handleDeleteRoom(room.id)}
-            >
-              <img
-                src="/icons/delete.svg"
-                alt="icono de eliminar"
-                class="w-full"
-              />
-            </button>
+            <ButtonDelete on:click={() => handleDeleteRoom(room.id)} />
           </div>
         {/each}
       </div>
