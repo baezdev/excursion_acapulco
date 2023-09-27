@@ -3,11 +3,11 @@
     calculatePercentage,
     calculateTotal,
     handleSumTotals,
-  } from "../../helpers/operations";
-  import { generateMessage } from "../../helpers/messages";
-  import { validateForm } from "../../helpers/validateForm";
-  import { showCongralutationsAlert } from "../../helpers/alerts";
-  import { generateConfetti } from "../../helpers/confetti";
+    validateForm,
+    generateMessage,
+    showCongralutationsAlert,
+    generateConfetti,
+  } from "../../helpers";
   import { sendMessage } from "../../service/sendMessage";
   import LinkButton from "../ui/LinkButton.svelte";
   import Field from "./Field.svelte";
@@ -40,6 +40,12 @@
     total = calculatePercentage(handleSumTotals(rooms));
   };
 
+  const handleReserve = (message) => {
+    sendMessage(message);
+    showCongralutationsAlert();
+    generateConfetti();
+  };
+
   const handleSubmit = () => {
     errors = validateForm({ name, phone, palcesAvailable: 45, rooms });
 
@@ -49,9 +55,7 @@
 
     const message = generateMessage({ name, phone, rooms, total });
 
-    sendMessage(message);
-    showCongralutationsAlert();
-    generateConfetti();
+    handleReserve(message);
   };
 </script>
 
@@ -63,16 +67,16 @@
     <div class="flex items-start justify-between gap-5">
       <Field
         bind:fieldValue={name}
-        label="Nombre"
+        label="Nombre Completo"
         name="name"
-        placeholder="Ingrese su nombre"
+        placeholder="Ingrese su nombre completo"
         error={errors.name}
       />
       <Field
         bind:fieldValue={phone}
-        label="Telefono"
+        label="Teléfono"
         name="phone"
-        placeholder="Ingrese su numero de telefono"
+        placeholder="Ingrese su numero de teléfono"
         type="number"
         error={errors.phone}
       />
@@ -91,38 +95,40 @@
           on:click={handleAddNewRoom}
           size="small"
         >
-          Agregar habitacion
+          Agregar Habitación
         </LinkButton>
       </div>
-      <div class="flex flex-col gap-3 mt-5">
+      <div class="flex flex-col gap-10 md:gap-4 mt-5">
         {#each rooms as room}
           <div
             class="flex place-items-start gap-5 animate-fade animate-once animate-ease-in-out"
           >
-            <Field
-              bind:fieldValue={room.persons}
-              label="# de personas"
-              name={`persons${room.id}`}
-              placeholder="Maximo 4"
-              type="number"
-              error={errors[`person${room.id}`]}
-              on:input={({ target }) => {
-                room.total = calculateTotal(target.value);
-                total = calculatePercentage(handleSumTotals(rooms));
-              }}
-            />
-            <Field
-              bind:fieldValue={room.childrens}
-              label="# de niños"
-              name={`childrens${room.id}`}
-              placeholder="Habra niños?"
-              type="number"
-              error={errors[`children${room.id}`]}
-              on:input={({ target }) => {
-                room.total = calculateTotal(room.persons, target.value);
-                total = calculatePercentage(handleSumTotals(rooms));
-              }}
-            />
+            <div class="flex flex-col md:flex-row gap-5">
+              <Field
+                bind:fieldValue={room.persons}
+                label="# de personas"
+                name={`persons${room.id}`}
+                placeholder="Maximo 4"
+                type="number"
+                error={errors[`person${room.id}`]}
+                on:input={({ target }) => {
+                  room.total = calculateTotal(target.value);
+                  total = calculatePercentage(handleSumTotals(rooms));
+                }}
+              />
+              <Field
+                bind:fieldValue={room.childrens}
+                label="# de niños"
+                name={`childrens${room.id}`}
+                placeholder="Habra niños?"
+                type="number"
+                error={errors[`children${room.id}`]}
+                on:input={({ target }) => {
+                  room.total = calculateTotal(room.persons, target.value);
+                  total = calculatePercentage(handleSumTotals(rooms));
+                }}
+              />
+            </div>
             <span class="flex-1 font-medium self-center"
               >Total: $<span class="text-xl font-semibold"
                 >{calculateTotal(room.persons, room.childrens)}</span
