@@ -12,7 +12,7 @@
 </script>
 
 <Separator />
-<section class="py-16 text-font" id="hotel">
+<section class="pt-16 pb-44 text-font" id="hotel">
   <Container>
     <h2 class="mb-10 text-3xl font-bold text-font md:text-6xl">Hotel {name}</h2>
     <article

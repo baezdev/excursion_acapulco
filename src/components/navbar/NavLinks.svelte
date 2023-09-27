@@ -49,5 +49,7 @@
       {/if}
     {/each}
   </ul>
-  <LinkButton href="/reserve" variant="secondary">quiero reservar</LinkButton>
+  <div class="mx-auto md:mx-0">
+    <LinkButton href="/reserve" variant="secondary">quiero reservar</LinkButton>
+  </div>
 </div>
