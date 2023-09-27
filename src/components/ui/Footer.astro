@@ -2,12 +2,21 @@
 import Container from "./Container.svelte";
 ---
 
-<footer class="relative bottom-0 w-full py-10 mt-36 bg-secondary animate-fade animate-once animate-ease-in-out">
+<footer
+  class="relative bottom-0 w-full py-6 mt-20 bg-secondary animate-fade animate-once animate-ease-in-out"
+>
   <Container>
-    <div>
-      <a href="/"
-        ><h1 class="text-lg font-bold md:text-xl">🌴 Vamos a Acapulco</h1></a
-      >
+    <div class="flex flex-col items-center md:flex-row md:justify-between">
+      <a href="/">
+        <h1 class="text-xl font-bold md:text-xl">🌴 Vamos a Acapulco</h1>
+      </a>
+      <p class="text-lg">
+        Creado con ❤️ por <a
+          href="https://github.com/baezdev"
+          class="text-primary font-semibold"
+          target="_blank">Angel Baez</a
+        >
+      </p>
     </div>
   </Container>
 </footer>
