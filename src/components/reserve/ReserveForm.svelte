@@ -42,8 +42,8 @@
 
   const handleReserve = (message) => {
     sendMessage(message);
-    showCongralutationsAlert();
     generateConfetti();
+    showCongralutationsAlert();
   };
 
   const handleSubmit = () => {

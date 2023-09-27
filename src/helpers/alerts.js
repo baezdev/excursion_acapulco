@@ -1,5 +1,5 @@
 import Swal from "sweetalert2";
-export const showCongralutationsAlert = () => {
+export const showCongralutationsAlert = async () => {
   /* Swal.fire(
     "Felicidades! 👏🏼",
     "Diste el primer paso para tener unas excelentes vacaciones 🌴👙",
@@ -12,5 +12,9 @@ export const showCongralutationsAlert = () => {
     icon: "success",
     confirmButtonText: "Ok ⭐",
     confirmButtonColor: "#00B9AE"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      window.location.href = "/";
+    }
   })
 }
