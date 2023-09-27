@@ -1,5 +1,4 @@
 import Swal from "sweetalert2";
-
 export const showCongralutationsAlert = () => {
   Swal.fire(
     "Felicidades! 👏🏼",

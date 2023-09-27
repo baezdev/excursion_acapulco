@@ -15,7 +15,7 @@
     {
       title: "Términos y condiciones",
       description:
-        "Si quieres saber mas, revisa nuestros <a href='terminos' class='font-semibold text-primary'>terminos y condiciones</a>",
+        "Si quieres saber mas, revisa nuestros <a href='/termsAndConditions' class='font-semibold text-primary'>terminos y condiciones</a>",
       image: "book",
     },
   ];
