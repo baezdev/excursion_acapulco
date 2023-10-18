@@ -1,4 +1,6 @@
 <script>
+  import { twMerge } from "tailwind-merge";
+
   export let fieldValue;
   export let name;
   export let type = "text";
@@ -36,9 +38,22 @@
         {name}
         on:input
       />
+    {:else if type === "area"}
+      <textarea
+        bind:value={fieldValue}
+        class={twMerge(fieldStyle, "resize-none")}
+        rows="3"
+        {placeholder}
+        {name}
+        on:input
+      />
     {/if}
   </div>
   {#if error}
-    <p class="mt-1 text-sm font-medium text-red-500 animate-fade animate-once animate-ease-in-out">{error}</p>
+    <p
+      class="mt-1 text-sm font-medium text-red-500 animate-fade animate-once animate-ease-in-out"
+    >
+      {error}
+    </p>
   {/if}
 </div>

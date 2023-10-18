@@ -6,7 +6,9 @@
 
 <section class="pt-24 text-font">
   <Container>
-    <main class="flex flex-col items-center gap-10 md:flex-row animate-fade animate-once animate-ease-in-out">
+    <main
+      class="flex flex-col items-center gap-10 md:flex-row animate-fade animate-once animate-ease-in-out"
+    >
       <article class="md:w-1/2 h-max">
         <h2 class="mb-5 text-3xl font-bold md:text-5xl">
           <span class="text-primary">¡Prepara las Maletas!</span> Reserva tu Escapada
